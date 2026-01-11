@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> vee var prod</title>
-  <meta name="description" content="what I do" />
+  <title>vee var</title>
+  <meta name="description" content="vee var prod" />
   <style>
     :root {
       --bg: #0b0b0c;
@@ -86,15 +87,22 @@
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
     }
 
     .project {
       background: var(--card);
       border-radius: var(--radius);
-      padding: 22px;
+      padding: 0;
       border: 1px solid #1c1d22;
+      overflow: hidden;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
@@ -106,10 +114,7 @@
     .project h3 { margin: 0 0 8px; }
     .project p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
 
-    .project a {
-      font-size: 14px;
-      color: var(--accent);
-    }
+    .project span { font-size: 14px; color: var(--accent); }
 
     .about {
       max-width: 720px;
@@ -135,45 +140,68 @@
 <body>
   <div class="container">
     <header>
-      <div class="logo">EpicCheeseYVL</div>
+      <div class="logo">Vee Var</div>
       <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">My Projects</a>
+        <a href="#about">About me</a>
+        <a href="#contact">Contact Me</a>
       </nav>
     </header>
 
     <section class="hero">
       <div>
-        <h1>Hi, I’m Veer <br/>I build web stuff.</h1>
+        <h1>Hi, I’m Veer</h1>
         <p>
-          developer focused on building websites.
-          
+          I design and build websites that are cool and unique.<br />
+          I love playboi carti<br />
+          I also love megan from katseye hence my fan website abt her lol 
+        </p>
+        <div style="margin-top:24px; display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#projects" style="padding:12px 18px; border-radius:12px; background:var(--accent); color:#0b0b0c; font-weight:500;">View my Work →</a>
+          <a href="#contact" style="padding:12px 18px; border-radius:12px; border:1px solid #1c1d22; color:var(--fg);">Get in Touch</a>
+        </div>
       </div>
       <div class="hero-card">
-        <small>what I'm doing rn</small>
-        <h3>3rd project out now</h3>
-        <p style="color: var(--muted)"> megan!!!</p>
+        <small>What I do</small>
+        <h3>Web design & frontend</h3>
+        <p style="color: var(--muted)">if u need a website, im here</p>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>My Work</h2>
       <div class="projects">
+        <a class="project" href="https://katseye-megan.vercel.app/" target="_blank" rel="noopener">
+          <img src="megss.jpg" alt="megan" style="width:100%; height:180px; object-fit:cover; display:block;" />
+          <div style="padding:22px;">
+            <h3>megan🍒</h3>
+            <p>megan 4 life🍒</p>
+            <span>Visit website →</span>
+          </div>
+        </a>
         <a class="project" href="https://flight-tracker-thingy.vercel.app/" target="_blank" rel="noopener">
-          <h3>3D Flight Tracker</h3>
-          <p>a cool flight tracker</p>
-          <span>Visit website →</span>
+          <img src="bbl.jpg" alt="bbl" style="width:100%; height:180px; object-fit:cover; display:block;" />
+          <div style="padding:22px;">
+            <h3>3D flight viewer</h3>
+            <p>see planes from a new perspective<p>
+            <span>Visit website →</span>
+          </div>
         </a>
         <a class="project" href="https://epiccheese-yvl.github.io/" target="_blank" rel="noopener">
-          <h3>Music Player</h3>
-          <p>ad free music player</p>
-          <span>Visit website →</span>
+          <img src="ojasbbl.jpg" alt="carti" style="width:100%; height:180px; object-fit:cover; display:block;" />
+          <div style="padding:22px;">
+            <h3>Music Player</h3>
+            <p>a unique way to play your favourite songs</p>
+            <span>Visit website →</span>
+          </div>
         </a>
-        <a class="project" href="https://katseye-megan.vercel.app/" target="_blank" rel="noopener">
-          <h3>Megan</h3>
-          <p>❤️</p>
-          <span>Visit website →</span>
+        <a class="project" href="https://kabeer-goofy.vercel.app/" target="_blank" rel="noopener">
+          <img src="kabeer.jpeg" alt="kabeer goofy" style="width:100%; height:180px; object-fit:cover; display:block;" />
+          <div style="padding:22px;">
+            <h3>kabeer goofy</h3>
+            <p>kabeer goofy</p>
+            <span>Visit website →</span>
+          </div>
         </a>
       </div>
     </section>
@@ -181,22 +209,23 @@
     <section id="about">
       <h2>About</h2>
       <p class="about">
-        14 YVL
+        14<br /> YVL<br /> megan 4 life 
       </p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p class="about">
-        Snap: vv.yvl <br />
-        GitHub: github.com/EpicCheese-YVL <br />
-        IG : vvyvl00
+        IRL: find me and talk to me lol<br />
+        GitHub: github.com/EpicCheese-YVL<br />
+        Snap: vv.yvl<br />
+        IG  : vvyvl00
       </p>
     </section>
 
     <footer>
       <span>© 2026 Vee Var</span>
-      <span>Built with HTML & CSS</span>
+      <span>Built with the blood of my enemies</span>
     </footer>
   </div>
 </body>
